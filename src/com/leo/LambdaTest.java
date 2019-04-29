@@ -8,8 +8,6 @@ public class LambdaTest {
 
 	public static void main(String[] args) {
 
-		LambdaTest lambdaTest = new LambdaTest();
-
 		// 参数类型声明
 		MathOperation add = (int a, int b) -> a + b;
 		// 参数不声明类型
@@ -19,15 +17,12 @@ public class LambdaTest {
 		// 不带大括号以及返回语句
 		MathOperation div = (a, b) -> a / b;
 
-		System.out.println(lambdaTest.operate(10, 5, add));
-		System.out.println(lambdaTest.operate(10, 5, sub));
-		System.out.println(lambdaTest.operate(10, 5, mul));
-		System.out.println(lambdaTest.operate(10, 5, div));
+		System.out.println(add.operate(10, 5));
+		System.out.println(sub.operate(10, 5));
+		System.out.println(mul.operate(10, 5));
+		System.out.println(div.operate(10, 5));
+		
 
-	}
-
-	public int operate(int a, int b, MathOperation mathOperation) {
-		return mathOperation.operate(a, b);
 	}
 
 	@FunctionalInterface
