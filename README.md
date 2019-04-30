@@ -16,6 +16,17 @@ java8 新特性
 + 默认方法
 + 函数式接口  
 + Stream
+		
+		数据源: 可以是集合，数组，I/O channel， 产生器generator 等。
+		聚合操作:类似SQL语句一样的操作， 比如filter, map, reduce, find, match, sorted等。
+		
+
+   Stream操作还有两个基础的特征：
+
+		Pipelining: 中间操作都会返回流对象本身。 这样多个操作可以串联成一个管道， 如同流式风格（fluent style）。
+		内部迭代： 对集合遍历都是通过Iterator或者For-Each的方式, 显式的在集合外部进行迭代， 这叫做外部迭代。
+				Stream提供了内部迭代的方式， 通过访问者模式(Visitor)实现。
+				
 + Optional类
 + Nashorn JavaScript引擎
 + 时间日期API
