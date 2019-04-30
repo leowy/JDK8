@@ -1,6 +1,6 @@
 # JDK8
 
-java8 新特性  
+Java8 新特性  
 + Lambda表达式
 		
 		可选类型声明：不需要声明参数类型，编译器可以统一识别参数值。
@@ -14,7 +14,16 @@ java8 新特性
 		方法引用使用一对冒号 :: 。
 		
 + 默认方法
+		
+		默认方法就是接口可以有实现方法，而且不需要实现类去实现其方法。
+		我们只需在方法名前面加个 default 关键字即可实现默认方法。
+
 + 函数式接口  
+		
+		Comsumer<T>			输入一个参数，返回void
+		Function<T,R>		输入一个T类型，返回R类型
+		Predicate<T>		输入一个T类型，返回boolean
+		Supplier<T>			无输入，返回T类型
 + Stream
 		
 		数据源: 可以是集合，数组，I/O channel， 产生器generator 等。
@@ -28,6 +37,11 @@ java8 新特性
 				Stream提供了内部迭代的方式， 通过访问者模式(Visitor)实现。
 				
 + Optional类
+		
+		Optional 类是一个可以为null的容器对象。如果值存在则isPresent()方法会返回true，调用get()方法会返回该对象。
+		Optional 是个容器：它可以保存类型T的值，或者仅仅保存null。Optional提供很多有用的方法，这样我们就不用显式进行空值检测。
+		Optional 类的引入很好的解决空指针异常。
+		
 + Nashorn JavaScript引擎
 + 时间日期API
 + Base64
