@@ -1,6 +1,6 @@
-# JDK8
+# Java
 
-Java8 新特性  
+### Java8 新特性  
 + Lambda表达式
 		
 		可选类型声明：不需要声明参数类型，编译器可以统一识别参数值。
@@ -44,8 +44,8 @@ Java8 新特性
 		
 + Nashorn JavaScript引擎
 + 时间日期API
-
 旧版的 Java 中，日期时间 API:  
+		
 		
 		非线程安全 − java.util.Date 是非线程安全的，所有的日期类都是可变的，这是Java日期类最大的问题之一。
 		设计很差 − Java的日期/时间类的定义并不一致，在java.util和java.sql的包中都有日期类，此外用于格式化
