@@ -1,4 +1,4 @@
-package com.ly.clone;
+package com.lz.clone;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
