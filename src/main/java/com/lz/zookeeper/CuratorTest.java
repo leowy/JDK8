@@ -9,7 +9,7 @@ import org.apache.zookeeper.data.Stat;
 /**  
  *  开源客户端Curator
  *
- *  @author	Zhang Wei
+ *  @author	Leowy Zhang
  */
 public class CuratorTest {
 	
