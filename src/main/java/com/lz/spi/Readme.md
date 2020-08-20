@@ -3,17 +3,18 @@
 + 第1步： 初始化
 
 
-    // 加载接口类型
-    public static <S> ServiceLoader<S> load(Class<S> service) {
-        ClassLoader cl = Thread.currentThread().getContextClassLoader();
-        return ServiceLoader.load(service, cl);
-    }
-        // 重载load方法
-        public static <S> ServiceLoader<S> load(Class<S> service,
-                                                ClassLoader loader)
-        {
-            return new ServiceLoader<>(service, loader);
-        }
+            // 加载接口类型  
+            public static <S> ServiceLoader<S> load(Class<S> service) {
+                ClassLoader cl = Thread.currentThread().getContextClassLoader();
+                return ServiceLoader.load(service, cl);
+            }
+            
+            // 重载load方法
+            public static <S> ServiceLoader<S> load(Class<S> service,
+                                                    ClassLoader loader)
+            {
+                return new ServiceLoader<>(service, loader);
+            }
         
             // 实例化ServiceLoader
             private ServiceLoader(Class<S> svc, ClassLoader cl) {
