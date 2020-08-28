@@ -17,11 +17,14 @@
 		我们只需在方法名前面加个 default 关键字即可实现默认方法。
 
 + 函数式接口  
+[![dIfgZ6.png](https://s1.ax1x.com/2020/08/28/dIfgZ6.png)](https://imgchr.com/i/dIfgZ6)
 		
 		Comsumer<T>			输入一个参数，返回void
 		Function<T,R>		输入一个T类型，返回R类型
 		Predicate<T>		输入一个T类型，返回boolean
 		Supplier<T>			无输入，返回T类型
+		
+		
 + Stream
 		
 		数据源: 可以是集合，数组，I/O channel， 产生器generator 等。

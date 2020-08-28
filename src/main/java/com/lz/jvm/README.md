@@ -1,6 +1,6 @@
 # Java虚拟机
 
-![java内存结构](https://github.com/leowy/JVM/blob/master/res/JVM内存结构.png)  
+[![dIh0Tf.png](https://s1.ax1x.com/2020/08/28/dIh0Tf.png)](https://imgchr.com/i/dIh0Tf)
 
 ### JVM 内存模型
 
