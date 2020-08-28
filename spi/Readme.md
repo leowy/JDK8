@@ -8,7 +8,6 @@
                 ClassLoader cl = Thread.currentThread().getContextClassLoader();
                 return ServiceLoader.load(service, cl);
             }
-            
             // 重载load方法
             public static <S> ServiceLoader<S> load(Class<S> service,
                                                     ClassLoader loader)

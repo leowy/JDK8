@@ -1,6 +1,6 @@
-package com.lz.spi.impl;
+package com.ly.spi.impl;
 
-import com.lz.spi.IVehicle;
+import com.ly.spi.IVehicle;
 
 /**
  * @Auther: Leowy Zhuang
