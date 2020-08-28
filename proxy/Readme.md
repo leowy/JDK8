@@ -14,8 +14,6 @@
 + 无法代理final类
 + 无法代理final方法
 
-
-
 # java动态代理
 ### 原理
 + 利用InvaocationHandler拦截器
@@ -23,7 +21,6 @@
 
 ### 注意
 + 被代理类必须实现了接口
-
 
 # java动态代理与cglib代理
 ### 区别
