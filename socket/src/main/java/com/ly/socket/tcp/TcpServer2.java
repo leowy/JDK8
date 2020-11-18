@@ -20,22 +20,16 @@ public class TcpServer2 {
                     Socket server = serverSocket.accept();
                     System.out.println("等待远程连接，端口号为：" + serverSocket.getLocalPort() + "...");
                     System.out.println("远程主机地址：" + server.getRemoteSocketAddress());
-//                DataInputStream in = new DataInputStream(server.getInputStream());
                     InputStream is = server.getInputStream();
                     byte[] b = new byte[1024];
                     OutputStream os = server.getOutputStream();
                     while (true) {
-//                    System.out.println(in.readUTF());
                         is.read(b);
                         System.out.println(new String(b, Charset.defaultCharset()));
                         Scanner scanner = new Scanner(System.in);
                         String content = scanner.nextLine();
                         System.out.println(content);
-//                    DataOutputStream out = new DataOutputStream(server.getOutputStream());
-//                    out.writeUTF(content);
                         os.write(content.getBytes());
-//                    os.close();
-//                    is.close();
                     }
                 } catch (IOException e) {
                     e.printStackTrace();

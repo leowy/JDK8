@@ -3,12 +3,8 @@ package com.lz.zookeeper;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
-import org.apache.curator.framework.recipes.atomic.AtomicValue;
-import org.apache.curator.framework.recipes.atomic.DistributedAtomicInteger;
-import org.apache.curator.framework.recipes.barriers.DistributedBarrier;
 import org.apache.curator.framework.recipes.barriers.DistributedDoubleBarrier;
 import org.apache.curator.retry.ExponentialBackoffRetry;
-import org.apache.curator.retry.RetryNTimes;
 
 /**  
  *  开源客户端Curator之分布式Barrier

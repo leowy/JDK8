@@ -1,13 +1,13 @@
 package com.lz.zookeeper;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.concurrent.CountDownLatch;
-
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.locks.InterProcessMutex;
 import org.apache.curator.retry.ExponentialBackoffRetry;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.concurrent.CountDownLatch;
 
 /**  
  *  开源客户端Curator之分布式锁

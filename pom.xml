@@ -2,50 +2,31 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.lz.java</groupId>
   <artifactId>java</artifactId>
-  <version>0.0.1</version>
+    <packaging>pom</packaging>
+    <version>0.0.1</version>
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>6</source>
-					<target>6</target>
+					<source>8</source>
+					<target>8</target>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-	<dependencies>
-  	<dependency>
-  		<groupId>org.apache.zookeeper</groupId>
-  		<artifactId>zookeeper</artifactId>
-  		<version>3.5.6</version>
-  	</dependency>
-  	<dependency>
-	    <groupId>com.101tec</groupId>
-	    <artifactId>zkclient</artifactId>
-	    <version>RELEASE</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.apache.curator</groupId>
-  		<artifactId>curator-framework</artifactId>
-  		<version>4.3.0</version>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.apache.curator</groupId>
-  		<artifactId>curator-recipes</artifactId>
-  		<version>4.3.0</version>
-  	</dependency>
-	<dependency>
-	    <groupId>org.apache.curator</groupId>
-	    <artifactId>curator-test</artifactId>
-	    <version>4.3.0</version>
-	    <!-- <scope>test</scope> -->
-	</dependency>
-  	<dependency>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-lang3</artifactId>
-    <version>3.9</version>
-</dependency>
-  </dependencies>
+    <modules>
+        <module>strategy</module>
+        <module>java8</module>
+        <module>zookeeper</module>
+		<module>callback</module>
+		<module>fastjson</module>
+		<module>netty</module>
+		<module>proxy</module>
+		<module>spi</module>
+		<module>thread</module>
+		<module>socket</module>
+
+    </modules>
 </project>
