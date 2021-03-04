@@ -6,6 +6,9 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -69,8 +72,17 @@ private static final int PORT = 12345;
                 System.out.println("=============>");
                 ClientMap.getChannels().forEach((s, channel) -> {
                     ByteBuf byteBuf = channel.alloc().buffer();
-                    byteBuf.writeBytes("testing.....".getBytes());
-                    channel.writeAndFlush(byteBuf);
+//                    byteBuf.writeBytes("testing.....".getBytes());
+                    Hobby hobby = new Hobby();
+                    hobby.setTest("ok");
+                    Test test = new Test();
+                    test.setName("zhangw");
+                    test.setAge(18);
+                    test.setHobby(hobby);
+
+
+//                    byteBuf.writeBytes(test);
+                    channel.writeAndFlush(test);
 
                 });
             }
@@ -87,5 +99,30 @@ private static final int PORT = 12345;
                 System.err.println("端口[" + port + "]绑定失败!");
             }
         });
+    }
+
+    public static byte[] objectToByte(Object obj) {
+        byte[] bytes = null;
+        ByteArrayOutputStream bo = new ByteArrayOutputStream();
+        ObjectOutputStream oo = null;
+        try {
+            oo = new ObjectOutputStream(bo);
+            oo.writeObject(obj);
+            bytes = bo.toByteArray();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bo.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                oo.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return bytes;
     }
 }

@@ -1,4 +1,4 @@
-package com.ly.strategy.Intf;
+package com.ly.strategy;
 
 public interface Learn {
 

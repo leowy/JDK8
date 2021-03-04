@@ -1,6 +1,6 @@
 package com.ly.strategy.impl;
 
-import com.ly.strategy.Intf.Learn;
+import com.ly.strategy.Learn;
 
 public class JavaLearn implements Learn {
     @Override

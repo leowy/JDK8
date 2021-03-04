@@ -20,6 +20,7 @@ public class MyClientInitializer extends ChannelInitializer<SocketChannel> {
 //        pipeline.addLast(new StringDecoder(CharsetUtil.UTF_8));
 //        //字符串编码
 //        pipeline.addLast(new StringEncoder(CharsetUtil.UTF_8));
+        pipeline.addLast(new TestDecoder());
         //自己定义的处理器
         pipeline.addLast(new MyClientHandler());
     }

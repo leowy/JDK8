@@ -24,7 +24,8 @@ public class MyServerInitializer extends ChannelInitializer<NioSocketChannel> {
     @Override
     protected void initChannel(NioSocketChannel nioSocketChannel) throws Exception {
         ChannelPipeline pipeline = nioSocketChannel.pipeline();
-        pipeline.addLast(new ProtobufEncoder());
+        pipeline.addLast(new TestEncoder());
+//        pipeline.addLast(new ProtobufEncoder());
         pipeline.addLast(new RuleBasedIpFilter(new IPFilter(addresses)));
 //        pipeline.addLast(new RuleBasedIpFilter(new IPFilter2()));
 //        pipeline.addLast(new LengthFieldBasedFrameDecoder(Integer.MAX_VALUE,0,4,0,4));

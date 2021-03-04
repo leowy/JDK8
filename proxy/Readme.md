@@ -16,7 +16,7 @@
 
 # java动态代理
 ### 原理
-+ 利用InvaocationHandler拦截器
++ 利用InvocationHandler拦截器
 + 使用反射机制生成一个实现匿名代理类
 
 ### 注意
